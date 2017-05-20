@@ -9,19 +9,23 @@
 define('APP_ROOT_PATH', str_replace('\\', '/', str_replace('index.php', '', __FILE__)));
 if (!is_dir(APP_ROOT_PATH . 'public/runtime/')) @mkdir(APP_ROOT_PATH . 'public/runtime/');
 require APP_ROOT_PATH . 'public/config.php';
-
+require APP_ROOT_PATH . 'vendor/autoload.php';
 require APP_ROOT_PATH . 'lib/Cache.php';
 
-$cacheService = new CacheService();
+/*$cacheService = new CacheService();
 $cache = $cacheService->getInstance();
 $data = [
     'title' => '测试数据',
     'content' => '这是用于测试cache 缓存类的数据123'
 ];
 $cache->set('test"2', $data);
-var_dump($cache->get('test"2'));
-
-
+var_dump($cache->get('test"2'));*/
+if(isMobile()){
+    logger()->info('这是手机访问的 -> ');
+} else {
+    logger()->info('这不是手机访问的->');
+}
+echo 'bbbccc';
 
 
 
