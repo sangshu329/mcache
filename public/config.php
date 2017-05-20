@@ -9,5 +9,5 @@ $distribution_cfg=[
     'CACHE_TYPE' => 'File',
     'CACHE_LOG' => true
 ];
-require APP_ROOT_PATH . 'public/define.php';
+define ('IS_DEBUG',0);
 require APP_ROOT_PATH . 'public/common.php';

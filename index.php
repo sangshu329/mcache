@@ -5,6 +5,7 @@
  * Date: 2017/5/20 0020
  * Time: 14:39
  */
+
 define('APP_ROOT_PATH', str_replace('\\', '/', str_replace('index.php', '', __FILE__)));
 if (!is_dir(APP_ROOT_PATH . 'public/runtime/')) @mkdir(APP_ROOT_PATH . 'public/runtime/');
 require APP_ROOT_PATH . 'public/config.php';
